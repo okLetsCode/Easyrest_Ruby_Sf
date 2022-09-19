@@ -1,6 +1,6 @@
 Environment Setup
-Global Dependencies
 
+Global Dependencies
 Install Ruby (sudo apt install ruby-full)
 Install bundler
 $ sudo gem install bundler
