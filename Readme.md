@@ -1,12 +1,13 @@
 Environment Setup
 
-Global Dependencies
+- Global Dependencies
 Install Ruby (sudo apt install ruby-full)
 Install bundler
 $ sudo gem install bundler
 
-Project Dependencies
+- Project Dependencies
 Install packages
 $ sudo bundle install
-Running Tests
+
+- Running Tests
 $ rspec
