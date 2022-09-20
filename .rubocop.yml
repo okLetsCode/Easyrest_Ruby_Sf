@@ -1,0 +1,12 @@
+AllCops:
+  Exclude:
+    - Gemfile
+
+require:
+  - rubocop-rspec
+
+RSpec/HookArgument:
+  EnforcedStyle: each
+
+Metrics/LineLength:
+  Max: 120
