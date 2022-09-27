@@ -18,42 +18,42 @@ class RestaurantList
   end
 
   def click_viewall
-    @driver.find_element(VIEWALL_TAB).click
+    driver.find_element(VIEWALL_TAB).click
   end
 
   def click_beer
-    @driver.find_element(BEER_TAB).click
+    driver.find_element(BEER_TAB).click
   end
 
   def click_fast_foot
-    @driver.find_element(FASTFOOT_TAB).click
+    driver.find_element(FASTFOOT_TAB).click
   end
 
   def click_johnson_details
-    @driver.find_element(JAHNSON_DETAILS_BTN).click
+    driver.find_element(JAHNSON_DETAILS_BTN).click
   end
 
   def click_balllogan_details
-    @driver.find_element(BALLLOGAN_DETAILS_BTN).click
+    driver.find_element(BALLLOGAN_DETAILS_BTN).click
   end
 
   def click_preston_details
-    @driver.find_element(PRESTON_DETAILS_BTN).click
+    driver.find_element(PRESTON_DETAILS_BTN).click
   end
 
   def click_johnson_watchmenu
-    @driver.find_element(JAHNSON_WATCHMENU_BTN).click
+    driver.find_element(JAHNSON_WATCHMENU_BTN).click
   end
 
   def click_balllogan_watchmenu
-    @driver.find_element(BALLLOGAN_WATCHMENU_BTN).click
+    driver.find_element(BALLLOGAN_WATCHMENU_BTN).click
   end
 
   def click_preston_watchmenu
-    @driver.find_element(PRESTON_WATCHMENU_BTN).click
+    driver.find_element(PRESTON_WATCHMENU_BTN).click
   end
 
   def click_slide_arrow
-    @driver.find_element(SLIDE_RIGHT_LEFT_BTN).click
+    driver.find_element(SLIDE_RIGHT_LEFT_BTN).click
   end
 end
