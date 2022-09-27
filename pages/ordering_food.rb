@@ -23,7 +23,7 @@ class OrderingFood
     @driver.find_element(CHIKEN_CHORIZO_DETAILS).click
   end
 
-  def go_to_salad
+  def goto_salad
     @driver.find_element(GO_TO_SALAD).click
   end
 

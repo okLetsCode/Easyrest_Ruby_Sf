@@ -35,11 +35,11 @@ class OrderConfirmation
     @driver.find_element(CHANGE_QUANTITY).send_keys(value)
   end
 
-  def cancel
+  def click_cancel
     @driver.find_element(CANCEL_BTN).click
   end
 
-  def submit
+  def click_submit
     @driver.find_element(SUBMIT_BTN).click
   end
 end

@@ -25,7 +25,7 @@ class RestaurantList
     @driver.find_element(BEER_TAB).click
   end
 
-  def click_fastfoot
+  def click_fast_foot
     @driver.find_element(FASTFOOT_TAB).click
   end
 
