@@ -10,7 +10,7 @@ class OrderConfirmation
   CHANGE_QUANTITY = { xpath: '/html/body/div[2]/div[2]/div/div[2]/div[2]/table/tbody/tr[1]/td[1]/button/span[1]/svg' }.freeze
   CANCEL_BTN = { xpath: "//span[contains(@class, 'MuiButton-label-81')][contains(., 'Cancel')]" }.freeze
   SUBMIT_BTN = { xpath: "//span[contains(@class, 'MuiButton-label-81')][contains(., 'Submit')]" }.freeze
-  
+
   def select_date
     @driver.find_element(DATA_CHANGE).click
   end
