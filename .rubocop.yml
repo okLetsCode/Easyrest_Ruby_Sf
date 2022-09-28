@@ -4,9 +4,17 @@ AllCops:
 
 require:
   - rubocop-rspec
+  - rubocop
+  - rubocop-performance
 
 RSpec/HookArgument:
   EnforcedStyle: each
 
+RSpec/InstanceVariable:
+ Enabled: false
+
 Metrics/LineLength:
-  Max: 120
+  Max: 200
+
+Metrics/ClassLength:
+  Max: 220
