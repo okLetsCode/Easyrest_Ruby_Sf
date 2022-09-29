@@ -2,10 +2,11 @@
 
 # This page is for class OrderingFood
 class OrderingFood
-  CHIKEN_BROCCOLI = { xpath: '//div[2]//div[1]//div[1]//div[1]//div[2]//div[2]//div[1]//div[3]//button[1]//span[1]' }.freeze
-  EYEBALL_PASTA = { xpath: '//div[11]//div[1]//div[1]//div[1]//div[2]//div[2]//div[1]//div[3]//button[1]//span[1]' }.freeze
+  ADD_CHIKEN_BROCCOLI = { xpath: '//div[2]//div[1]//div[1]//div[1]//div[2]//div[2]//div[1]//div[3]//button[1]//span[1]' }.freeze
+  ADD_EYEBALL_PASTA = { xpath: '//div[11]//div[1]//div[1]//div[1]//div[2]//div[2]//div[1]//div[3]//button[1]//span[1]' }.freeze
   CHIKEN_CHORIZO_DETAILS = { xpath: '//div[6]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/button[1]/span[1]' }.freeze
   GO_TO_SALAD = { css: "[href*='#Salats']" }.freeze
+  SHOW_CART = { css: "[aria-label='Show cart']" }.freeze
   REMOVE_ITEM_FROM_CART = { css: "[aria-label='Remove item']" }.freeze
   SUBMIT_ORDER_BTN = { xpath: "//span[normalize-space()='Submit order']" }.freeze
   CHANGE_QUANTITY = { xpath: '//div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[4]/div[1]/div[1]/input[1]' }.freeze
@@ -19,15 +20,19 @@ class OrderingFood
   end
 
   def select_chiken_broccoli
-    drive.find_element(CHIKEN_BROCCOLI).click
+    drive.find_element(ADD_CHIKEN_BROCCOLI).click
   end
 
   def select_eyeball_pasta
-    driver.find_element(EYEBALL_PASTA).click
+    driver.find_element(ADD_EYEBALL_PASTA).click
   end
 
   def view_details
     driver.find_element(CHIKEN_CHORIZO_DETAILS).click
+  end
+
+  def cart_show
+    driver.find_element(SHOW_CART).click
   end
 
   def goto_salad
