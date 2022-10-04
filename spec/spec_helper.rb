@@ -5,7 +5,6 @@ require 'webdrivers'
 require 'rspec'
 require 'yaml'
 require 'test/unit/assertions'
-include Test::Unit::Assertions
 
 RSpec.configure do |config|
   config.before(:context) do

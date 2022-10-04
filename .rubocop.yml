@@ -8,7 +8,7 @@ require:
   - rubocop-performance
 
 RSpec/HookArgument:
-  EnforcedStyle: context
+  EnforcedStyle: implicit
 
 RSpec/ExampleLength:
   Enabled: false
