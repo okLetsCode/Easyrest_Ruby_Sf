@@ -20,50 +20,50 @@ class OrderingFood
   end
 
   def select_chiken_broccoli
-    drive.find_element(ADD_CHIKEN_BROCCOLI).click
+    @drive.find_element(ADD_CHIKEN_BROCCOLI).click
   end
 
   def select_eyeball_pasta
-    driver.find_element(ADD_EYEBALL_PASTA).click
+    @driver.find_element(ADD_EYEBALL_PASTA).click
   end
 
   def view_details
-    driver.find_element(CHIKEN_CHORIZO_DETAILS).click
+    @driver.find_element(CHIKEN_CHORIZO_DETAILS).click
   end
 
   def cart_show
-    driver.find_element(SHOW_CART).click
+    @driver.find_element(SHOW_CART).click
   end
 
   def goto_salad
-    driver.find_element(GO_TO_SALAD).click
+    @driver.find_element(GO_TO_SALAD).click
   end
 
   def remove_item
-    driver.find_element(REMOVE_ITEM_FROM_CART).click
+    @driver.find_element(REMOVE_ITEM_FROM_CART).click
   end
 
   def click_submit
-    driver.find_element(SUBMIT_ORDER_BTN).click
+    @driver.find_element(SUBMIT_ORDER_BTN).click
   end
 
   def quantity_change(value)
-    driver.find_element(CHANGE_QUANTITY).send_keys(value)
+    @driver.find_element(CHANGE_QUANTITY).send_keys(value)
   end
 
   def remove_item_order_confirmation
-    driver.find_element(REMOVE_ITEM).click
+    @driver.find_element(REMOVE_ITEM).click
   end
 
   def quantity_change_order_confirmation(value)
-    driver.find_element(CHANGE_QUANTITY_ORD_CONFM).send_keys(value)
+    @driver.find_element(CHANGE_QUANTITY_ORD_CONFM).send_keys(value)
   end
 
   def click_cancel_order_confirmation
-    driver.find_element(CANCEL_BTN).click
+    @driver.find_element(CANCEL_BTN).click
   end
 
   def click_submit_order_confirmation
-    driver.find_element(SUBMIT_BTN).click
+    @driver.find_element(SUBMIT_BTN).click
   end
 end

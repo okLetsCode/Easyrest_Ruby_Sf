@@ -1,9 +1,16 @@
-:customer_email:
-:admin_email:
-:administr_email:
-:mod_email:
-:owner_email:
-:waiter_email:
-
-:long_pass: 1111
-:short_pass: 1
+emails:
+  customer_email: 'nathansmith@test.com'
+  admin_email: 'steveadmin@test.com'
+  administr_email: 'eringonzales@test.com'
+  mod_email: 'petermoderator@test.com'
+  owner_email: 'christianyoung@test.com'
+  waiter_email: 'alexandriawright@test.com'
+  new_email: 
+pw:
+  customer_pwd: 1111
+  admin_pwd: 1
+  administr_pwd: 1
+  mod_pwd: 1
+  owner_pwd: 1111
+  waiter_pwd: 1
+  new_pwd: 
