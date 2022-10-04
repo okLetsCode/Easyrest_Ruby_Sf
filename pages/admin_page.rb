@@ -31,94 +31,94 @@ class AdminPage
   end
 
   def click_user_admin_profile
-    driver.find_element(USER_ADMIN_PROFILE_BTN).click
+    @driver.find_element(USER_ADMIN_PROFILE_BTN).click
   end
 
   def click_admin_panel
-    driver.find_element(ADMIN_PANEL).click
+    @driver.find_element(ADMIN_PANEL).click
   end
 
   def click_users_btn
-    driver.find_element(USERS_BTN).click
+    @driver.find_element(USERS_BTN).click
   end
 
   def click_unlock_user_btn
-    driver.find_element(USER_LOCK).click
+    @driver.find_element(USER_LOCK).click
   end
 
   def click_owners
-    driver.find_element(OWNERS_BTN).click
+    @driver.find_element(OWNERS_BTN).click
   end
 
   def click_owners_lock
-    driver.find_element(OWNERS_LOCK).click
+    @driver.find_element(OWNERS_LOCK).click
   end
 
   def click_moderators_btn
-    driver.find_element(MODERATORS_BTN).click
+    @driver.find_element(MODERATORS_BTN).click
   end
 
   def click_moderators_all
-    driver.find_element(MODERATORS_ALL).click
+    @driver.find_element(MODERATORS_ALL).click
   end
 
   def click_moderators_active
-    driver.find_element(MODERATORS_ACTIVE).click
+    @driver.find_element(MODERATORS_ACTIVE).click
   end
 
   def click_moderators_banned
-    driver.find_element(MODERATORS_BANNED).click
+    @driver.find_element(MODERATORS_BANNED).click
   end
 
   def click_moderators_lock
-    driver.find_element(MODERATORS_LOCK).click
+    @driver.find_element(MODERATORS_LOCK).click
   end
 
   def click_moderators_cancel
-    driver.find_element(MODERATORS_CANCEL_BTN).click
+    @driver.find_element(MODERATORS_CANCEL_BTN).click
   end
 
   def click_add_moderators
-    driver.find_element(ADD_MODERATOR_BTN).click
+    @driver.find_element(ADD_MODERATOR_BTN).click
   end
 
   def click_add_moderators_birthdate
-    driver.find_element(ADD_MODERATOR_BIRTHDATE).click
+    @driver.find_element(ADD_MODERATOR_BIRTHDATE).click
   end
 
   def click_add_moderators_confirmpass
-    driver.find_element(ADD_MODERATOR_CONFIRMPASS).click
+    @driver.find_element(ADD_MODERATOR_CONFIRMPASS).click
   end
 
   def click_add_moderators_createacc
-    driver.find_element(ADD_MODERATOR_CREATEACC).click
+    @driver.find_element(ADD_MODERATOR_CREATEACC).click
   end
 
   def click_add_moderators_email
-    driver.find_element(ADD_MODERATOR_EMAIL).click
+    @driver.find_element(ADD_MODERATOR_EMAIL).click
   end
 
   def click_add_moderators_name
-    driver.find_element(ADD_MODERATOR_NAME).click
+    @driver.find_element(ADD_MODERATOR_NAME).click
   end
 
   def click_add_moderators_pass
-    driver.find_element(ADD_MODERATOR_PASS).click
+    @driver.find_element(ADD_MODERATOR_PASS).click
   end
 
   def click_add_moderators_phonenumber
-    driver.find_element(ADD_MODERATOR_PHONENUMBER).click
+    @driver.find_element(ADD_MODERATOR_PHONENUMBER).click
   end
 
   def click_restaurants_btn
-    driver.find_element(RESTAURANTS_BTN).click
+    @driver.find_element(RESTAURANTS_BTN).click
   end
 
   def click_restaurants_approved
-    driver.find_element(RESTAURANTS_APPROVED).click
+    @driver.find_element(RESTAURANTS_APPROVED).click
   end
 
   def click_restaurants_unapproved
-    driver.find_element(RESTAURANTS_UNAPPROVED).click
+    @driver.find_element(RESTAURANTS_UNAPPROVED).click
   end
 end

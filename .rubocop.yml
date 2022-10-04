@@ -8,7 +8,16 @@ require:
   - rubocop-performance
 
 RSpec/HookArgument:
-  EnforcedStyle: each
+  EnforcedStyle: context
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/ContextWording:
+  Enabled: false  
+
+RSpec/DescribeClass:
+  Enabled: false
 
 RSpec/InstanceVariable:
  Enabled: false
