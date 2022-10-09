@@ -2,14 +2,15 @@
 
 # This page contains class Administrator and the page objects for it.
 class Administrator
-  ROW = { xpath: '/html/body/div/main/div/div/div/div/div[1]/div[1]' }.freeze
+  ROW = { xpath: '//div/main/div/div/div/div/div[1]/div[1]/div[1]/div' }.freeze
+  
   ACCEPT_BTN = { xpath: '/html/body/div/main/div/div/div/div/div[1]/div[2]/div/div/div/div/div[2]/div/button/span[1]' }.freeze
   ASSIGN_BTN = { xpath: '/html/body/div/main/div/div/div/div/div[1]/div[2]/div/div/div/div/div[2]/div[3]/button' }.freeze
   WAITER_RADIO_BTN = { xpath: '/html/body/div/main/div/div/div/div/div[1]/div[2]/div/div/div/div/div[2]/div[1]/fieldset/div/label[1]/span[1]/span[1]/input' }.freeze
   WAITING_FOR_CONFIRM_TAB = { xpath: '/html/body/div/main/div/header/div/div[2]/div[2]/div/button[1]/span[1]/span/span' }.freeze
   ACCEPTED_TAB = { xpath: '//span[contains(text(),"Accepted")]' }.freeze
   WAITERS_TAB = { xpath: '/html/body/div/main/div/header/div/div[2]/div[2]/div/button[4]/span[1]/span/span' }.freeze
-  WAITER = { xpath: '/html/body/div/main/div/div[1]/div[1]/div[1]/div/div/p' }.freeze
+  WAITER = { xpath: '//div/main/div/div[1]/div[1]/div[1]/div/div/p' }.freeze
 
   def initialize(driver)
     @driver = driver
@@ -17,10 +18,11 @@ class Administrator
 
   def click_order
     @driver.find_element(ROW).click
+    sleep(2)
   end
 
   def click_waiter
-    @driver.find_element(WAITER)
+    @driver.find_element(WAITER).click
   end
 
   def click_waiting_for_confirm_tab
@@ -55,7 +57,10 @@ class Administrator
 
   def view_detailed_order_of_waiter
     click_waiters_tab
+    sleep(2)
     click_waiter
+    sleep(2)
     click_order
+    sleep(2)
   end
 end
