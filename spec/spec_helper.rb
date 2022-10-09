@@ -2,15 +2,16 @@
 
 require 'selenium-webdriver'
 require 'webdrivers'
-require 'rspec'
 require 'yaml'
 require 'test/unit/assertions'
+include RSpec::Expectations
 
 RSpec.configure do |config|
   config.before(:context) do
+    @wait = Selenium::WebDriver::Wait.new(:timeout => 10)
     @driver = Selenium::WebDriver.for :chrome
     @driver.manage.window.maximize
-    env_data = YAML.load_file('../config/env.yml')
+    env_data = YAML.load_file('config/env.yml')
     @driver.get(env_data[:base_url])
   end
   config.after(:context) do

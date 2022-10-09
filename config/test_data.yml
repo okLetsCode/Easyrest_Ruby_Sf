@@ -1,0 +1,29 @@
+emails:
+  customer_email: 'nathansmith@test.com'
+  admin_email: 'steveadmin@test.com'
+  administr_email: 'eringonzales@test.com'
+  mod_email: 'petermoderator@test.com'
+  owner_email: 'christianyoung@test.com'
+  waiter_email: 'alexandriawright@test.com'
+  new_email: 
+pw:
+  customer_pwd: 1111
+  admin_pwd: 1
+  administr_pwd: 1
+  mod_pwd: 1
+  owner_pwd: 1111
+  waiter_pwd: 1
+  new_pwd: 
+
+test_rest:
+  rest_name: 'Test reastaurant'
+  rest_address: 'Test address'
+  rest_phone: '+123456789'
+  rest_preview_txt: 'This is a test preview text.'
+  rest_description: 'This is a test description.'
+
+adminer_creds:
+  server: 'db'
+  username: 'admin'
+  password: '12345678'
+  database: 'easyrest'
