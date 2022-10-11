@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
+require_relative 'home_page'
+
 # This class RegistrationPage is for registration page.
-class RegistrationPage
+class RegistrationPage < HomePage
   NAME_FIELD = { name: 'name' }.freeze
   EMAIL_FIELD = { name: 'email' }.freeze
   PHONE_FIELD = { name: 'phoneNumber' }.freeze
@@ -20,6 +22,7 @@ class RegistrationPage
 
   def initialize(driver)
     @driver = driver
+    super
   end
 
   def type_name(value)
