@@ -24,7 +24,7 @@ class ModeratorPage
 
   def can_detele_restaurant
     @driver.find_element(xpath: '/html/body/div/div/main/div[1]/header/div/div[2]/div[2]/div/button[3]').click
-    @wait.until{ @driver.find_element(xpath: '//div/div/main/div[2]/div[3]/div/div/div[3]/button') }
+    @wait.until { @driver.find_element(xpath: '//div/div/main/div[2]/div[3]/div/div/div[3]/button') }
     @driver.find_element(xpath: '//div/div/main/div[2]/div[3]/div/div/div[3]/button').click
   end
 
