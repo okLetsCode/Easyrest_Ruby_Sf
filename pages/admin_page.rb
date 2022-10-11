@@ -7,7 +7,7 @@ class AdminPage
   USERS_BTN = { css: '[href*=users]' }.freeze
   USER_LOCK = { xpath: "//tbody/tr[1]/td[5]/button[1]/span[1]//*[name()='svg']" }.freeze
   OWNERS_BTN = { xpath: '/html/body/div/div/ul/a[2]' }.freeze
-  OWNERS_LOCK = { xpath: '/html/body/div/div/main/div[2]/table/tbody/tr[1]/td[5]/button' }.freeze
+  OWNERS_LOCK = { xpath: "//tbody/tr[1]/td[5]/button[1]/span[1]//*[name()='svg']" }.freeze
   MODERATORS_BTN = { css: '[href*="/admin/moderators"]' }.freeze
   MODERATORS_ALL = { xpath: '/html/body/div/div/main/div[1]/header/div/div[2]/div[2]/div/button[1]/span[1]/span/span' }.freeze
   MODERATORS_ACTIVE = { xpath: '/html/body/div/div/main/div[1]/header/div/div[2]/div[2]/div/button[2]/span[1]/span/span' }.freeze
@@ -21,7 +21,7 @@ class AdminPage
   ADD_MODERATOR_PASS = { name: 'password' }.freeze
   ADD_MODERATOR_CONFIRMPASS = { name: 'repeated_password' }.freeze
   ADD_MODERATOR_CREATEACC = { xpath: '/html/body/div/div/main/div/div/form/div/div/div[7]/div/button' }.freeze
-  MODERATORS_LOCK = { xpath: '/html/body/div/div/main/div[2]/table/tbody/tr/td[5]/button' }.freeze
+  MODERATORS_LOCK = { xpath: "//tbody/tr[1]/td[5]/button[1]/span[1]//*[name()='svg']" }.freeze
   RESTAURANTS_BTN = { xpath: '/html/body/div/div/ul/a[4]/div[2]' }.freeze
   RESTAURANTS_UNAPPROVED = { xpath: '/html/body/div/div/main/div[1]/header/div/div[2]/div[2]/div/button[2]/span[1]/span' }.freeze
   RESTAURANTS_APPROVED = { xpath: '/html/body/div/div/main/div[1]/header/div/div[2]/div[2]/div/button[3]/span[1]/span' }.freeze

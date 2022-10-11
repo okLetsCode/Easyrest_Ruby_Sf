@@ -41,3 +41,10 @@ test_administrator:
   administrator_email: 'peter@gmail.com'
   administrator_pw: 'peter54321'
   administrator_phone: '0898741321'
+
+moderator: 
+  name: '50 cent'
+  email: 'rapper@gmail.com'
+  phone_number: +359896999666
+  password: 'thebestoftheworst'
+  confirm_password: 'thebestoftheworst'
