@@ -14,6 +14,16 @@ class LoginPage
     @driver = driver
   end
 
+  def clear_email
+    @driver.find_element(EMAIL_FIELD).click
+    @driver.action.key_down(:control).send_keys('a').key_up(:control).perform
+  end
+
+  def clear_pwd
+    @driver.find_element(PASSWORD_FIELD).click
+    @driver.action.key_down(:control).send_keys('a').key_up(:control).perform
+  end
+
   def click_sign_in
     @driver.find_element(SIGN_IN_BTN).click
   end
