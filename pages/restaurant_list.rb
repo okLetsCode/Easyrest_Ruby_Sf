@@ -1,13 +1,16 @@
 # frozen_string_literal: true
 
+require_relative 'home_page'
+require_relative '../spec/spec_helper'
+
 # This page is for class RestaurantList
-class RestaurantList
-  VIEWALL_TAB = { xpath: "//span[@innertext='View all']" }.freeze
+class RestaurantList < HomePage
+  VIEWALL_TAB = { xpath: "//span[contains(text(),'View all')]" }.freeze
   BEER_TAB = { xpath: "//span[@innertext='beer']" }.freeze
-  FASTFOOT_TAB = { xpath: "//span[@innertext='fast food']" }.freeze
-  JAHNSON_DETAILS_BTN = { css: "[href*='restaurant/2']" }.freeze
-  BALLLOGAN_DETAILS_BTN = { css: "[href*='restaurant/5']" }.freeze
-  PRESTON_DETAILS_BTN = { css: "[href*='restaurant/8']" }.freeze
+  FASTFOOT_TAB = { xpath: "//span[contains(text(),'fast food')]" }.freeze
+  JAHNSON_DETAILS_BTN = { xpath: '//div/div/div[1]/div/div[2]/div/div[4]/div[1]/a/span[1]' }.freeze
+  BALLLOGAN_DETAILS_BTN = { css: '//div/div/div[2]/div/div[2]/div/div[4]/div[1]/a/span[1]' }.freeze
+  PRESTON_DETAILS_BTN = { css: '//div/div/div[3]/div/div[2]/div/div[4]/div[1]/a/span[1]' }.freeze
   JAHNSON_WATCHMENU_BTN = { css: "[href*='menu/3']" }.freeze
   BALLLOGAN_WATCHMENU_BTN = { css: "[href*='menu/9']" }.freeze
   PRESTON_WATCHMENU_BTN = { css: "[href*='menu/15']" }.freeze
@@ -15,6 +18,7 @@ class RestaurantList
 
   def initialize(driver)
     @driver = driver
+    super
   end
 
   def click_viewall
