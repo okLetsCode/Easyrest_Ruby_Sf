@@ -40,8 +40,8 @@ RSpec.describe ModeratorPage do
   it 'can ban/unban owners' do
     mod.click_owners_btn
     mod.ban_owners
-    expect(@driver.find_element(xpath: "//tbody/tr[1]/td[5]/p[1]").text).to eq('Banned')
+    expect(@driver.find_element(xpath: '//tbody/tr[1]/td[5]/p[1]').text).to eq('Banned')
     mod.ban_owners
-    expect(@driver.find_element(xpath: "//tbody/tr[1]/td[5]/p[1]").text).to eq('Active')
+    expect(@driver.find_element(xpath: '//tbody/tr[1]/td[5]/p[1]').text).to eq('Active')
   end
 end
