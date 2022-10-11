@@ -12,7 +12,11 @@ RSpec.configure do |config|
     @driver = Selenium::WebDriver.for :chrome
     @driver.manage.window.maximize
     env_data = YAML.load_file('config/env.yml')
-    @driver.get(env_data[:base_url])
+    begin
+      @driver.get(env_data[:base_url])
+    rescue => RSpec::Core::MultipleExceptionError
+      @driver.get(env_data[:local_url])
+    end
   end
   config.after(:context) do
     @driver.quit

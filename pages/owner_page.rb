@@ -18,7 +18,7 @@ class Owner
   MY_ORDER_HISTORY_BTN = { css: "[href*='profile/order_history']" }.freeze
   WATCH_MENU_BTN = { xpath: "//span[contains(@class, 'MuiButton-label')][contains(., 'Watch Menu')]" }.freeze
   DETAILS_BTN = { xpath: "//span[contains(@class, 'MuiButton-label')][contains(., 'details')]" }.freeze
-  ADD_RESTAURANT_BTN = { xpath: "//button[contains(@title, 'Add restaurant')]" }.freeze
+  ADD_RESTAURANT_BTN = { xpath: "//*[@title='Add restaurant']" }.freeze
   REST_NAME_FLD = { xpath: '//div[1]/div[3]/div/div/div/div[2]/form/div/div[1]/div/div/input' }.freeze
   REST_ADDRESS_FLD = { xpath: '//div[1]/div[3]/div/div/div/div[2]/form/div/div[2]/div/div/input' }.freeze
   REST_PHONE_FLD = { xpath: '//div[1]/div[3]/div/div/div/div[2]/form/div/div[3]/div/div/input' }.freeze
