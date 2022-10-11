@@ -14,13 +14,43 @@ RSpec/ExampleLength:
   Enabled: false
 
 RSpec/ContextWording:
-  Enabled: false  
+  Enabled: false
 
 RSpec/DescribeClass:
   Enabled: false
 
 RSpec/InstanceVariable:
  Enabled: false
+
+RSpec/LeakyConstantDeclaration:
+  Enabled: false
+
+RSpec/FilePath:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+Style/MixinUsage:
+  Enabled: false
+
+Style/RescueStandardError:
+  Enabled: false
+
+Naming/RescuedExceptionsVariableName:
+  Enabled: false
+
+Naming/ConstantName:
+  Enabled: false
+
+Style/ColonMethodCall:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
 
 Metrics/LineLength:
   Max: 200

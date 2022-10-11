@@ -4,8 +4,9 @@ emails:
   administr_email: 'eringonzales@test.com'
   mod_email: 'petermoderator@test.com'
   owner_email: 'christianyoung@test.com'
+  owner_email_2: 'jasonbrown@test.com'
   waiter_email: 'alexandriawright@test.com'
-  new_email: 
+  new_email: 'alexandros@gmail.com'
 pw:
   customer_pwd: 1111
   admin_pwd: 1
@@ -13,7 +14,7 @@ pw:
   mod_pwd: 1
   owner_pwd: 1111
   waiter_pwd: 1
-  new_pwd: 
+  new_pwd: 'alex1234'
 
 test_rest:
   rest_name: 'Test reastaurant'
@@ -22,8 +23,21 @@ test_rest:
   rest_preview_txt: 'This is a test preview text.'
   rest_description: 'This is a test description.'
 
-adminer_creds:
-  server: 'db'
-  username: 'admin'
-  password: '12345678'
-  database: 'easyrest'
+test_guest:
+  guest_name: 'Alexandros'
+  guest_email: 'alexandros@gmail.com'
+  guest_phone: '0898753159'
+  guest_pw: 'alex1234'
+  guest_confirm_pw: 'alex1234'
+
+test_waiter:
+  waiter_name: 'Emanuil'
+  waiter_email: 'john@gmail.com'
+  waiter_pw: 'john12345'
+  witer_phone: '0898789963'
+
+test_administrator:
+  administrator_name: 'Peter'
+  administrator_email: 'peter@gmail.com'
+  administrator_pw: 'peter54321'
+  administrator_phone: '0898741321'

@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
+require_relative 'login_page'
+
 # This page contains class HomePage and the page objects for it.
-class HomePage
+class HomePage < LoginPage
   HOMEPAGE_BTN = { xpath: '/html/body/div/header/div/nav/a[1]/span' }.freeze
   VIEW_ALL_BTN = { xpath: '/html/body/div/main/div/div/div[1]/a/img' }.freeze
   SIGN_UP_BTN = { css: "[href*='/sign-up']" }.freeze
@@ -14,6 +16,7 @@ class HomePage
 
   def initialize(driver)
     @driver = driver
+    super
   end
 
   def click_homepage
