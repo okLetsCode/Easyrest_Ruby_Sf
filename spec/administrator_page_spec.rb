@@ -3,7 +3,7 @@
 require_relative '../shared_context/shared_context_spec'
 require_relative '../pages/administrator_panel_page'
 
-cred = YAML.load_file('../config/creds.yml')
+cred = YAML.load_file('config/test_data.yml')
 
 RSpec.describe Administrator do
   let(:admstr) { described_class.new(@driver) }
@@ -11,4 +11,33 @@ RSpec.describe Administrator do
   let(:pw) { cred.fetch('pw')['administr_pwd'] }
 
   include_context 'login'
+
+  it "Select an order with status 'Waiting To Confirm' and accept it" do
+    admstr.click_waiting_for_confirm_tab
+    admstr.click_order
+    @wait.until { @driver.find_element(:xpath, '//div/main/div/div/div/div/div[1]/div[2]/div/div/div/div/div[2]/div/button/span[1]') }
+    admstr.click_accept_order
+    @wait.until { @driver.find_element(:xpath, '//div[1]/main[1]/div[1]/div[2]/div[1]/div[1]/span[1]/p[1]') }
+    expect(@driver.find_element(:xpath, '//div[1]/main[1]/div[1]/div[2]/div[1]/div[1]/span[1]/p[1]')).to be_displayed
+  end
+
+  it 'Select an order with status \'Accepted\' and assign in to a waiter' do
+    admstr.click_accepted_tab
+    admstr.click_order
+    @wait.until { @driver.find_element(:name, 'waiters') }
+    admstr.click_waiter_radio_btn
+    admstr.click_assign_order
+    @wait.until { @driver.find_element(:xpath, '//div[1]/main[1]/div[1]/div[2]/div[1]/div[1]') }
+    expect(@driver.find_element(:xpath, '//div[1]/main[1]/div[1]/div[2]/div[1]/div[1]')).to be_displayed
+  end
+
+  it 'Select a waiter and view his orders' do
+    admstr.click_waiters_tab
+    @wait.until { @driver.find_element(:xpath, '//div/main/div/div[1]/div[1]/div[1]/div') }
+    admstr.click_waiter
+    @wait.until { @driver.find_element(:xpath, '//div/main/div/div/div/div/div[1]/div[1]/div[1]/div') }
+    admstr.click_order
+    @wait.until { @driver.find_element(:xpath, '/html/body/div/main/div/div[1]/div[2]/div/div/div/div/div[1]/div/div[2]/div/div/div/div/table/tbody/tr[6]/td[3]').displayed? }
+    expect(@driver.find_element(:xpath, '//div/main/div/div[1]/div[2]/div/div/div/div/div[1]/div/div[2]/div/div/div/div/h6')).to be_displayed
+  end
 end
