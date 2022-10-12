@@ -19,41 +19,35 @@ RSpec.describe AdminPage do
   include_context 'login'
 
   it 'Check the ban and unban functionality by admin for users.' do
-    admin.click_lock_user_btn
-    @wait.until { @driver.find_element(xpath: "//p[@class='MuiTypography-root-41 MuiTypography-body2-49 MuiTypography-colorError-75']") }
-    expect(@driver.find_element(xpath: "//span[contains(text(),'Banned (1)')]").text).to eq('BANNED (1)')
+    admin.click_lock_button
+    @wait.until { @driver.find_element(xpath: "//span[contains(text(),'Banned (1)')]").displayed? }
     expect(@driver.find_element(xpath: "//span[contains(text(),'Active (9)')]").text).to eq('ACTIVE (9)')
-    admin.click_lock_user_btn
-    expect(@driver.find_element(xpath: '/html/body/div/div/main/div[2]/table/tbody/tr[1]/td[4]/p')).to be_displayed
+    admin.click_unlock_button
+    @wait.until { @driver.find_element(xpath: "//span[contains(text(),'Banned (0)')]").displayed? }
     expect(@driver.find_element(xpath: "//span[contains(text(),'Banned (0)')]").text).to eq('BANNED (0)')
-    expect(@driver.find_element(xpath: "//span[contains(text(),'Active (10)')]").text).to eq('ACTIVE (10)')
   end
 
   it 'Check the ban and unban functionality by admin for owners.' do
     admin.click_owners
-    admin.click_owners_lock
-    @wait.until { @driver.find_element(xpath: "//p[@class='MuiTypography-root-41 MuiTypography-body2-49 MuiTypography-colorError-75']") }
-    expect(@driver.find_element(xpath: "//span[contains(text(),'Banned (1)')]").text).to eq('BANNED (1)')
+    admin.click_lock_button
+    @wait.until { @driver.find_element(xpath: "//span[contains(text(),'Banned (1)')]").displayed? }
     expect(@driver.find_element(xpath: "//span[contains(text(),'Active (4)')]").text).to eq('ACTIVE (4)')
-    admin.click_owners_lock
-    expect(@driver.find_element(xpath: '//tbody/tr[1]/td[4]/p[1]')).to be_displayed
+    admin.click_unlock_button
+    @wait.until { @driver.find_element(xpath: "//span[contains(text(),'Active (5)')]").displayed? }
     expect(@driver.find_element(xpath: "//span[contains(text(),'Banned (0)')]").text).to eq('BANNED (0)')
-    expect(@driver.find_element(xpath: "//span[contains(text(),'Active (5)')]").text).to eq('ACTIVE (5)')
   end
 
   it 'Check the ban and unban functionality by admin for moderators.' do
     admin.click_moderators_btn
-    admin.click_moderators_lock
-    @wait.until { @driver.find_element(xpath: '//tbody/tr[1]/td[4]/p[1]') }
-    expect(@driver.find_element(xpath: "//span[contains(text(),'Banned (1)')]").text).to eq('BANNED (1)')
-    expect(@driver.find_element(xpath: "//span[contains(text(),'Active (1)')]").text).to eq('ACTIVE (1)')
-    admin.click_moderators_lock
-    expect(@driver.find_element(xpath: '//tbody/tr[1]/td[4]/p[1]')).to be_displayed
+    admin.click_lock_button
+    @wait.until { @driver.find_element(xpath: "//span[contains(text(),'Banned (1)')]").displayed? }
+    expect(@driver.find_element(xpath: "//span[contains(text(),'Active (0)')]").text).to eq('ACTIVE (0)')
+    admin.click_unlock_button
+    @wait.until { @driver.find_element(xpath: "//span[contains(text(),'Active (1)')]").displayed? }
     expect(@driver.find_element(xpath: "//span[contains(text(),'Banned (0)')]").text).to eq('BANNED (0)')
-    expect(@driver.find_element(xpath: "//span[contains(text(),'Active (2)')]").text).to eq('ACTIVE (2)')
   end
 
-  it 'Check the create moderator functionality.' do
+  xit 'Check the create moderator functionality.' do
     admin.click_moderators_btn
     admin.click_add_moderators
     admin.click_add_moderators_name(name)

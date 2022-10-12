@@ -8,11 +8,11 @@ class HomePage < LoginPage
   VIEW_ALL_BTN = { xpath: '/html/body/div/main/div/div/div[1]/a/img' }.freeze
   SIGN_UP_BTN = { css: "[href*='/sign-up']" }.freeze
   RESTAURANTS_LIST_BTN = { css: "[href*='/restaurants']" }.freeze
+
+  category_name = ['vegeterian', 'sushi', 'fast food', 'pub', 'pizza', 'kebab', 'beer', 'ukrainian cuisine']
+
+  VIEW_CATEGORY = { xpath: "//h6[normalize-space()='#{category_name.sample}']" }.freeze
   EASY_REST_BTN = { xpath: '/html/body/div/header/div/a' }.freeze
-
-  category_name = ['vegetarian', 'sushi', 'fast food', 'pub', 'pizza', 'kebab', 'greel', 'beer', 'burgers', 'ukrainian cuisine', 'japanese cuisine']
-
-  VIEW_CATEGORY = { xpath: "//img[@alt='#{category_name.sample}']" }.freeze
 
   def initialize(driver)
     @driver = driver

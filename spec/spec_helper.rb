@@ -21,5 +21,4 @@ RSpec.configure do |config|
   config.after(:context) do
     @driver.quit
   end
-  config.default_formatter = 'doc'
 end

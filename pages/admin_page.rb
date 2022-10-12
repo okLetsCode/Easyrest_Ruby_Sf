@@ -5,9 +5,9 @@ class AdminPage
   USER_ADMIN_PROFILE_BTN = { xpath: '/html/body/div/header/div/div/div/button/span[1]/div' }.freeze
   ADMIN_PANEL = { css: '[href*="/admin"]' }.freeze
   USERS_BTN = { css: '[href*=users]' }.freeze
-  USER_LOCK = { xpath: "//tbody/tr[1]/td[5]/button[1]/span[1]//*[name()='svg']" }.freeze
   OWNERS_BTN = { xpath: '/html/body/div/div/ul/a[2]' }.freeze
-  OWNERS_LOCK = { xpath: "//tbody/tr[1]/td[5]/button[1]/span[1]//*[name()='svg']" }.freeze
+  LOCK_BTN = { xpath: '/html/body/div/div/main/div[2]/table/tbody/tr[1]/td[5]/button' }.freeze
+  UNLOCK_BTN = { xpath: '/html/body/div/div/main/div[2]/table/tbody/tr/td[5]/button' }.freeze
   MODERATORS_BTN = { css: '[href*="/admin/moderators"]' }.freeze
   MODERATORS_ALL = { xpath: '/html/body/div/div/main/div[1]/header/div/div[2]/div[2]/div/button[1]/span[1]/span/span' }.freeze
   MODERATORS_ACTIVE = { xpath: '/html/body/div/div/main/div[1]/header/div/div[2]/div[2]/div/button[2]/span[1]/span/span' }.freeze
@@ -21,7 +21,6 @@ class AdminPage
   ADD_MODERATOR_PASS = { name: 'password' }.freeze
   ADD_MODERATOR_CONFIRMPASS = { name: 'repeated_password' }.freeze
   ADD_MODERATOR_CREATEACC = { xpath: '/html/body/div/div/main/div/div/form/div/div/div[7]/div/button' }.freeze
-  MODERATORS_LOCK = { xpath: "//tbody/tr[1]/td[5]/button[1]/span[1]//*[name()='svg']" }.freeze
   RESTAURANTS_BTN = { xpath: '/html/body/div/div/ul/a[4]/div[2]' }.freeze
   RESTAURANTS_UNAPPROVED = { xpath: '/html/body/div/div/main/div[1]/header/div/div[2]/div[2]/div/button[2]/span[1]/span' }.freeze
   RESTAURANTS_APPROVED = { xpath: '/html/body/div/div/main/div[1]/header/div/div[2]/div[2]/div/button[3]/span[1]/span' }.freeze
@@ -47,16 +46,18 @@ class AdminPage
     @driver.find_element(USERS_BTN).click
   end
 
-  def click_lock_user_btn
-    @driver.find_element(USER_LOCK).click
+  def click_lock_button
+    sleep(1)
+    @driver.find_element(LOCK_BTN).click
+  end
+
+  def click_unlock_button
+    sleep(1)
+    @driver.find_element(UNLOCK_BTN).click
   end
 
   def click_owners
     @driver.find_element(OWNERS_BTN).click
-  end
-
-  def click_owners_lock
-    @driver.find_element(OWNERS_LOCK).click
   end
 
   def click_moderators_btn
@@ -73,10 +74,6 @@ class AdminPage
 
   def click_moderators_banned
     @driver.find_element(MODERATORS_BANNED).click
-  end
-
-  def click_moderators_lock
-    @driver.find_element(MODERATORS_LOCK).click
   end
 
   def click_moderators_cancel
