@@ -5,7 +5,7 @@ class Administrator
   ROW = { xpath: '//div/main/div/div/div/div/div[1]/div[1]/div[1]/div' }.freeze
   ACCEPT_BTN = { xpath: '//div/main/div/div/div/div/div[1]/div[2]/div/div/div/div/div[2]/div/button/span[1]' }.freeze
   ASSIGN_BTN = { xpath: '//div/main/div/div/div/div/div[1]/div[2]/div/div/div/div/div[2]/div[3]/button' }.freeze
-  WAITER_RADIO_BTN = { name: 'waiters' }.freeze
+  WAITER_RADIO_BTN = { xpath: '//div[1]/div[2]/div/div/div/div/div[2]/div[1]/fieldset/div/label[2]/span[1]/span[1]' }.freeze
   WAITING_FOR_CONFIRM_TAB = { xpath: '//div/main/div/header/div/div[2]/div[2]/div/button[1]/span[1]/span/span' }.freeze
   ACCEPTED_TAB = { xpath: '//span[contains(text(),"Accepted")]' }.freeze
   WAITERS_TAB = { xpath: '//div/main/div/header/div/div[2]/div[2]/div/button[4]/span[1]/span/span' }.freeze
